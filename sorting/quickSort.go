@@ -5,10 +5,13 @@ import (
 )
 
 func main(){
-  	fmt.Println(quickSort([]int{2,1,-3,0}, 0 , 3))
+  fmt.Println("Merge Sort:")
+  fmt.Println(quickSort([]int{22,11,-3,0}, 0 , 3))
+  fmt.Println(quickSort([]int{9,1,-3,0}, 0 , 3))
+  fmt.Println(quickSort([]int{-2,11,-3,10,0,220}, 0 , 3))
 }
 
-func quickSort(arr[]int, low int, high int) []int{
+func quickSort(arr[]int, low int, high int) []int {
   if low < high {
     pivot := partition(arr, low , high)
     quickSort(arr, low, pivot - 1 )
@@ -18,7 +21,7 @@ func quickSort(arr[]int, low int, high int) []int{
   return arr
 }
 
-func partition(arr[]int, low int ,  high int) int{
+func partition(arr[]int, low int ,  high int) int {
   pivot := arr[high]
   i := low
 

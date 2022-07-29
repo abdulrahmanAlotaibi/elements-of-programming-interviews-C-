@@ -5,19 +5,18 @@ import "fmt"
 func main (){
 
 	var l = LinkedList{}
-	var p Person= Person{"ddd",3} 
+	var p Person= Person{"Abdulrahman",3} 
 
 	l.insert(&p)
 	l.insert(&Person{"John", 19})
-	l.insert(&Person{"John", 19})
-	l.insert(&Person{"John", 19})
-	l.insert(&Person{"John", 19})
+	l.insert(&Person{"Bob", 19})
+	l.insert(&Person{"Jack", 19})
+	l.insert(&Person{"Martin", 19})
 
 	l.remove()
 	
 	l.display()
 
-	
 }
 
 
@@ -38,7 +37,7 @@ type LinkedList struct {
 	current *Node
 }
 
-func (l *LinkedList) isEmpty() bool{
+func (l *LinkedList) isEmpty() bool {
 	return l.head == nil
 } 
 
@@ -66,26 +65,25 @@ func (l *LinkedList) insert(val *Person){
 func (l *LinkedList) remove() {
 	if l.current == l.head {
 		l.head = l.head.next
-	}else {
+	} else {
         	temp:= l.head
         	for temp.next != l.current {
                 	temp = temp.next
         	}
 		temp.next = l.current.next
 	}
-	if l.current.next == nil { // single node list
+	if l.current.next == nil {
 		l.current = l.head 
 	}else{
 		l.current = l.current.next
 	}
 
-	
 }
 
 func (l *LinkedList) display(){
 	p:= l.head
 	for p != nil {
-		fmt.Printf(" %v -> ", p.data)
+		fmt.Printf("%v -> ", p.data)
 		
 		p = p.next
 	}

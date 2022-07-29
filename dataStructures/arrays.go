@@ -1,24 +1,21 @@
 package main
-/*
-- Array algorithims 
-*/
+
 import (
 	"fmt"
 )
 
 func main() {
-	fmt.Println("Sort even numbers first than odd numbers")
+	fmt.Println("Sort even numbers first then odd numbers:")
   evenOdd([]int{3,1,2,4,5})
   evenOdd([]int{4,4,2,13,9,5})
   evenOdd([]int{13,9,5,4,4,2,5})
 
-  fmt.Println("Dutch National Flag:")
+  fmt.Println("Dutch National Flag Algorithm:")
   fmt.Println(dutchFlagPartition([]int{13,9,5,4,4,2,51}, 2))
   fmt.Println("Improved Dutch National Flag:")
   fmt.Println(improvedDutchFlag([]int{13,9,5,4,4,2,51}, 2))
   fmt.Println("Delete any duplicates in an array")
   fmt.Println(deleteDuplicatesSortedArray([]int{2,3,5,7,11,11,13}))
-
 }
 
 func evenOdd(nums []int){
