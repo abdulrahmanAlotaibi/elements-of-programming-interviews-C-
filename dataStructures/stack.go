@@ -60,7 +60,6 @@ func main (){
 
 }
 
-
 func (stack *Stack) Pop () (string, error){
 	 
   stack.isEmpty()	
@@ -79,7 +78,6 @@ func (stack *Stack) Push(item string) {
 
 	fmt.Println("Item has been pushed successfully")
 }
-
 
 func (stack *Stack) Display(){
 
